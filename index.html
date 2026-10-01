@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXORA — Full-Service Digital Marketing Agency | We Turn Attention Into Growth</title>
+    
+    <!-- Synchronous Theme Script to Prevent FOUC -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('nexora_theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = (saved === 'dark' || saved === 'light') ? saved : (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="NEXORA is a premier creative digital marketing agency engineered for ambitious brands. We build high-impact digital experiences, growth systems, and performance campaigns." />
+    <meta name="keywords" content="digital marketing agency, performance marketing, brand strategy, SEO, creative design, AI marketing, web development" />
+    <meta name="author" content="NEXORA Agency" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NEXORA — Marketing That Moves People" />
+    <meta property="og:description" content="We build digital experiences, campaigns and growth systems that help ambitious brands stand out, connect and scale." />
+    <meta property="og:site_name" content="NEXORA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NEXORA — Full-Service Digital Marketing Agency" />
+    <meta name="twitter:description" content="We turn attention into exponential growth through data-driven creativity." />
+    
+    <!-- Favicon: Modern SVG Glowing 'N' Monogram -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2338bdf8'/><stop offset='50%25' stop-color='%236366f1'/><stop offset='100%25' stop-color='%23a855f7'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='%23050816'/><path d='M28 72V28L52 56L72 28V72' fill='none' stroke='url(%23g)' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+
+    <!-- Google Fonts Preconnect & Fonts (Syne, Plus Jakarta Sans, JetBrains Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#050816] text-[#F3F4F6] antialiased selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
