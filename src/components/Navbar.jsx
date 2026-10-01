@@ -110,10 +110,10 @@ export default function Navbar() {
     <>
       <header
         ref={navRef}
-        className="fixed top-0 left-0 right-0 z-40 flex justify-center px-4 py-4 md:py-6 transition-all duration-300 pointer-events-none"
+        className="fixed top-0 left-0 right-0 z-40 flex justify-center px-3 sm:px-4 py-3 sm:py-4 md:py-6 transition-all duration-300 pointer-events-none w-full max-w-full box-border"
       >
         <nav
-          className={`pointer-events-auto flex items-center justify-between gap-4 md:gap-8 px-5 py-3 rounded-full transition-all duration-500 max-w-6xl w-full ${
+          className={`pointer-events-auto flex items-center justify-between gap-2 sm:gap-4 md:gap-8 px-3 sm:px-5 py-2 sm:py-3 rounded-full transition-all duration-500 max-w-6xl w-full min-w-0 box-border ${
             isScrolled
               ? 'bg-[#070d24]/85 backdrop-blur-xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] shadow-blue-950/20'
               : 'bg-[#070d24]/50 backdrop-blur-md border border-white/5'
@@ -124,12 +124,12 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); scrollTo('#home'); }}
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-full"
+            className="flex items-center gap-1.5 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-full shrink-0 min-w-0"
             aria-label="NEXORA Homepage"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 p-[1.5px] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3 shadow-[0_0_15px_rgba(56,189,248,0.3)]">
-              <div className="w-full h-full bg-[#050816] rounded-[10px] flex items-center justify-center">
-                <svg className="w-5 h-5 text-cyan-400" viewBox="0 0 100 100" fill="none">
+            <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 p-[1.5px] transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3 shadow-[0_0_15px_rgba(56,189,248,0.3)] shrink-0">
+              <div className="w-full h-full bg-[#050816] rounded-[6px] sm:rounded-[10px] flex items-center justify-center">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" viewBox="0 0 100 100" fill="none">
                   <path
                     d="M28 72V28L52 56L72 28V72"
                     stroke="currentColor"
@@ -140,8 +140,8 @@ export default function Navbar() {
                 </svg>
               </div>
             </div>
-            <div className="flex flex-col">
-              <span className="font-display font-black text-xl tracking-wider text-white group-hover:text-cyan-300 transition-colors">
+            <div className="flex flex-col min-w-0">
+              <span className="font-display font-black text-sm sm:text-xl tracking-wide sm:tracking-wider text-white group-hover:text-cyan-300 transition-colors whitespace-nowrap">
                 NEXORA
               </span>
               <span className="text-[9px] uppercase tracking-[0.25em] text-slate-400 font-mono -mt-1 hidden sm:block">
@@ -175,18 +175,18 @@ export default function Navbar() {
           </div>
 
           {/* Right CTA & Mobile Toggle */}
-          <div className="flex items-center gap-3">
-            {/* Desktop Theme Toggle & Right CTA */}
-            <ThemeToggle className="hidden sm:inline-flex" />
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0 min-w-0">
+            {/* Theme Toggle */}
+            <ThemeToggle className="shrink-0" />
 
             <a
               href="#contact"
               onClick={(e) => { e.preventDefault(); scrollTo('#contact'); }}
-              className="relative inline-flex items-center justify-center gap-2 px-5 py-2 text-xs font-semibold tracking-wider text-white uppercase rounded-full group overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 border border-white/20 shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              className="relative inline-flex items-center justify-center gap-1 sm:gap-2 px-2.5 sm:px-5 py-1.5 sm:py-2 text-[11px] sm:text-xs font-semibold tracking-wider text-white uppercase rounded-full group overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 border border-white/20 shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 shrink-0 whitespace-nowrap"
             >
-              <span className="relative z-10 flex items-center gap-1.5">
+              <span className="relative z-10 flex items-center gap-1 sm:gap-1.5">
                 Let's Talk
-                <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
@@ -194,11 +194,11 @@ export default function Navbar() {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-full bg-white/5 border border-white/10 text-white hover:text-cyan-400 hover:border-cyan-400/30 transition-colors focus:outline-none"
+              className="lg:hidden p-1.5 sm:p-2 rounded-full bg-white/5 border border-white/10 text-white hover:text-cyan-400 hover:border-cyan-400/30 transition-colors focus:outline-none shrink-0"
               aria-label="Toggle Navigation Menu"
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
             </button>
           </div>
         </nav>
